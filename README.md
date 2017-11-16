@@ -3,31 +3,31 @@
 
 ### Instalações necessárias Debian 9 para o Moodle:
 
-* Instala o SUDO
+* Instale o SUDO
 ```shell
 su apt-get install sudo
 ```
 
-* Cria usuários e adiciona as permissões de SUDO
+* Crie usuários e adicione as permissões de SUDO
 ```shell
 useradd -m -U -d /home/usuario -s /bin/bash usuario
 
 usermod -a -G sudo usuario
 ```
 
-* Modifica a senha do usuário
+* Modifique a senha do usuário
 ```shell
 passwd usuario
 ```
 
-* Instalação de pacotes essenciais
+* Instale os pacotes essenciais
 ```shell
 sudo apt-get -y update && sudo apt-get -y upgrade
 
 sudo apt-get -y install sudo vim vim-scripts unzip zip p7zip-full htop iotop wget lynx curl locate ssh nano git build-essential software-properties-common
 ```
 
-* Instalação do Apache, configuração do caminho padrão e reload
+* Instale o Apache e configure o caminho padrão do WWW
 ```shell
 sudo apt-get install apache2
 
@@ -36,12 +36,12 @@ sudo vim /etc/apache2/sites-available/000-default.conf
 sudo service apache2 reload
 ```
 
-* Instalação do MySQL Server
+* Instale o MySQL Server
 ```shell
 sudo apt-get install mysql-server
 ```
 
-* Instalação do PHP 7.0 e extensões necessárias
+* Instale o PHP 7.0 e extensões necessárias
 ```shell
 sudo apt-get install php7.0 php7.0-mysql php7.0-json php7.0-curl php7.0-gd php7.0-intl php7.0-pspell php7.0-xml php7.0-xmlrpc php7.0-zip php7.0-cli php7.0-ldap aspell graphviz
 ```
@@ -50,17 +50,17 @@ sudo apt-get install php7.0 php7.0-mysql php7.0-json php7.0-curl php7.0-gd php7.
 
 ### Dump e restauração do banco de dados
 
-* Fazer dump do banco original
+* Faça o dump do banco original
 ```shell
 mysqldump -h 00.000.0.000 -u usuario_mysql -p nome_banco > /home/usuario/arquivo.sql
 ```
 
-* Tranferir o **sql do banco**, a pasta **moodledata** e a **pasta do Moodle** via SCP
+* Tranfira o **sql do banco**, a pasta **moodledata** e a **pasta do Moodle** via SCP
 ```shell
 scp -r caminho_arquivo_origem usuario_destino@00.000.00.0:/home/usuario_destino/pasta_destino
 ```
 
-* Restauração do banco
+* Restaure o banco
 ```shell
 mysql -u root -p nome_banco < arquivo.sql
 ```
@@ -88,7 +88,7 @@ sudo git branch --track NOME_BRANCH origin/MOODLE_34_STABLE
 sudo git checkout NOME_BRANCH
 ```
 
-* Copiar plugins e tema da pasta do Moodle antigo (e.g. moodle_old)
+* Copie os plugins e o tema da pasta do Moodle antigo (e.g. moodle_old)
 
 >blocks/course_overview_campus/
 
