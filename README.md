@@ -98,13 +98,11 @@ sudo git checkout NOME_BRANCH
 
 >blocks/ranking/
 
->blocks/sitenavigation/
-
 >blocks/twitter_feed/
 
 Dentro da pasta **blocks**:
 ```shell
-sudo cp -R ../../moodle_old/blocks/course_overview_campus/ ../../moodle_old/blocks/enrollment/ ../../moodle_old/blocks/fbcomments/ ../../moodle_old/blocks/ranking/ ../../moodle_old/blocks/sitenavigation/ ../../moodle_old/blocks/twitter_feed/ .
+sudo cp -R ../../moodle_old/blocks/course_overview_campus/ ../../moodle_old/blocks/enrollment/ ../../moodle_old/blocks/fbcomments/ ../../moodle_old/blocks/ranking/ ../../moodle_old/blocks/twitter_feed/ .
 ```
 
 >filter/geshi/
