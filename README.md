@@ -29,7 +29,7 @@ sudo apt-get -y install sudo vim vim-scripts unzip zip p7zip-full htop iotop wge
 
 * Instale o Apache e configure o caminho padrão do WWW
 ```shell
-sudo apt-get install apache2
+sudo apt-get install apache2 libapache2-mod-php7.0
 
 sudo vim /etc/apache2/sites-available/000-default.conf
 
