@@ -24,7 +24,7 @@ passwd usuario
 ```shell
 sudo apt-get -y update && sudo apt-get -y upgrade
 
-sudo apt-get -y install sudo vim vim-scripts unzip zip p7zip-full htop iotop wget lynx curl locate ssh nano git build-essential software-properties-common
+sudo apt-get -y install vim vim-scripts unzip zip p7zip-full htop iotop wget lynx curl locate ssh nano git build-essential software-properties-common
 ```
 
 * Instale o Apache e configure o caminho padrão do WWW
